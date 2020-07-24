@@ -1,24 +1,21 @@
 {
-  "name": "bootstrap-overview",
+  "name": "confusion",
   "version": "1.0.0",
-  "description": "\"This is a test directory to learn git and Node",
+  "description": "This is a website for Ristorante Con Fusion",
   "main": "index.html",
   "scripts": {
     "start": "npm run lite",
     "test": "echo \"Error: no test specified\" && exit 1",
     "lite": "lite-server"
   },
-  "repository": {
-    "type": "git",
-    "url": "git+ssh://git@github.com/animeshpaul91/Full-Stack-Web-Development-with-React-and-Node-Js.git"
-  },
-  "author": "Animesh Paul",
+  "author": "",
   "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/animeshpaul91/Full-Stack-Web-Development-with-React-and-Node-Js/issues"
-  },
-  "homepage": "https://github.com/animeshpaul91/Full-Stack-Web-Development-with-React-and-Node-Js#readme",
   "devDependencies": {
-    "lite-server": "^2.5.4"
+    "lite-server": "^2.3.0"
+  },
+  "dependencies": {
+    "bootstrap": "^4.5.0",
+    "jquery": "^3.5.1",
+    "popper.js": "^1.12.9"
   }
 }
