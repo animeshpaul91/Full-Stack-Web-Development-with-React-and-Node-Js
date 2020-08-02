@@ -90,22 +90,54 @@
         </div>
 
         <div class="row row-content">
-            <div class="col-12 col-sm-8 card offset-2">
-                <h3 class="card-header bg-warning text-white"> Facts At a Glance </h3>
-                <div class="card-body">
-                    <form>
-                        <div class="form-group row">
-                            <label for="num_of_guests" class="col-2 col-form-label"> Number of Guests </label>  <!--Label occupies 2 columns-->
-                            <div class="col-10">
-                                <input type="radio" id="num_of_guests" name="num_of_guests" value="1"> 
-                                <input type="radio" id="num_of_guests" name="num_of_guests" value="2">
-                                <input type="radio" id="num_of_guests" name="num_of_guests" value="3">
-                                <input type="radio" id="num_of_guests" name="num_of_guests" value="4">
-                                <input type="radio" id="num_of_guests" name="num_of_guests" value="5">
-                                <input type="radio" id="num_of_guests" name="num_of_guests" value="6">
-                            </div>                                                            
-                        </div>                        
-                    </form>                    
+            <div class="col-12 col-sm-8 offset-2">
+                <div class="card">
+                    <h3 class="card-header bg-warning text-white"> Reserve a Table </h3>
+                    <div class="card-body">
+                        <form>
+                            <div class="form-group row">
+                                <label for="num_of_guests" class="col-md-12 col-lg-2 col-form-label"> Number of Guests </label>  <!--Label occupies 2 columns-->
+                                <div class="form-check mr-3">
+                                    <input class="form-check-input" type="radio" name="1" id="1" value="1">
+                                    <label class="form-check-label" for="1"> 1 </label>
+                                </div>
+                                <div class="form-check mr-3">
+                                    <input class="form-check-input" type="radio" name="2" id="2" value="2">
+                                    <label class="form-check-label" for="2"> 2 </label>
+                                </div>                  
+                                <div class="form-check mr-3">
+                                    <input class="form-check-input" type="radio" name="3" id="3" value="3">
+                                    <label class="form-check-label" for="3"> 3 </label>
+                                </div>                  
+                                <div class="form-check mr-3">
+                                    <input class="form-check-input" type="radio" name="4" id="4" value="4">
+                                    <label class="form-check-label" for="4"> 4 </label>
+                                </div>                  
+                                <div class="form-check mr-3">
+                                    <input class="form-check-input" type="radio" name="5" id="5" value="5">
+                                    <label class="form-check-label" for="5"> 5 </label>
+                                </div>                  
+                                <div class="form-check mr-3">
+                                    <input class="form-check-input" type="radio" name="6" id="6" value="6">
+                                    <label class="form-check-label" for="6"> 6 </label>
+                                </div>                                                                                      
+                            </div>
+                            <div class="form-group row">
+                                <label for="dateandtime" class="col-md-12 col-lg-2 col-form-label"> Date and Time </label>  <!--Label occupies 2 columns-->
+                                <div class="col-md-3">
+                                    <input type="text" class="form-control" id="date" name="date" placeholder="Date"> 
+                                </div>                
+                                <div class="col-md-3">
+                                    <input type="text" class="form-control" id="time" name="time" placeholder="Time"> 
+                                </div>                 
+                            </div>
+                            <div class="form-group row">
+                                <div class="offset-md-2 col-10">
+                                    <button type="submit" class="btn btn-primary">Reserve</button>                                    
+                                </div>
+                            </div>
+                        </form>                    
+                    </div>                        
                 </div>
             </div>
         </div>
