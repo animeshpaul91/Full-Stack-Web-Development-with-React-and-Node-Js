@@ -1,6 +1,11 @@
 .vscode
 *.pdf
 Financial\ Aid
-Bootstrap_Overview/node_modules
-Bootstrap_Overview/PA
-Bootstrap_Overview/Ideation
+
+Week1_and_Week2/node_modules
+Week1_and_Week2/PA
+Week1_and_Week2/Ideation
+
+Week3/node_modules
+Week3/PA
+Week3/Ideation
