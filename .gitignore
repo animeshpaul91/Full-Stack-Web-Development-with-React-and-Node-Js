@@ -1,11 +1,7 @@
 .vscode
 *.pdf
 Financial\ Aid
-
-Week1_and_Week2/node_modules
-Week1_and_Week2/PA
-Week1_and_Week2/Ideation
-
-Week3/node_modules
-Week3/PA
-Week3/Ideation
+Certificates
+Week1_to_Week4/node_modules
+Week1_to_Week4/PA
+Week1_to_Week4/Ideation
