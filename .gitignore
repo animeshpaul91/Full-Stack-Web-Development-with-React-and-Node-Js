@@ -1,8 +1,10 @@
+.idea
 .vscode
 *.pdf
 Financial\ Aid
 Certificates
-Bootstrap_4/Week1_to_Week4/node_modules
-Bootstrap_4/Week1_to_Week4/PA
-Bootstrap_4/Week1_to_Week4/Ideation
-Bootstrap_4/Week1_to_Week4/dist
+
+FE_Web_UI_Frameworks/Bootstrap_4/Week1_to_Week4/node_modules
+FE_Web_UI_Frameworks/Bootstrap_4/Week1_to_Week4/PA
+FE_Web_UI_Frameworks/Bootstrap_4/Week1_to_Week4/Ideation
+FE_Web_UI_Frameworks/Bootstrap_4/Week1_to_Week4/dist
