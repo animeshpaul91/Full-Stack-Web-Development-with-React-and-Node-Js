@@ -8,6 +8,36 @@ class DishDetail extends Component {
         console.log("DishDetail constructor called");
     }
 
+    reformatDate(date) {
+        return new Date(date).toLocaleDateString("en-US", {
+            year: "numeric",
+            month: "short",
+            day: "numeric"
+        });
+    }
+
+    renderComments(comments) {
+        const all_comments = comments.map((comment) => {
+            return (
+                <div key={comment.id}>
+                    <ul className="list-unstyled">
+                        <li> {comment.comment} </li>
+                        <ul className="list-unstyled">
+                            <li> -- {comment.author}, {this.reformatDate(comment.date)} </li>
+                        </ul>
+                    </ul>
+                </div>
+            );
+        });
+
+        return (
+            <div>
+                <h4> Comments </h4>
+                {all_comments}
+            </div>
+        );
+    }
+
     renderDish(dish) {
         console.log("DishDetail RenderDish called");
         if (dish) {
@@ -23,7 +53,7 @@ class DishDetail extends Component {
                         </Card>                        
                     </div>
                     <div className="col-12 col-md-5 m-1">
-                        {/* comments go here */}
+                        {this.renderComments(dish.comments)}
                     </div>
                 </div>
             );
