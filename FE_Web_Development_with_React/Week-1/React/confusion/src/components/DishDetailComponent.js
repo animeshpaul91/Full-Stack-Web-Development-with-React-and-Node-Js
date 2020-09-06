@@ -12,7 +12,7 @@ class DishDetail extends Component {
         console.log("DishDetail RenderDish called");
         if (dish) {
             return (
-                <div>
+                <div className="row">
                     <div className="col-12 col-md-5 m-1">
                         <Card>
                         <CardImg width="100%" src={dish.image} alt={dish.image} />
@@ -39,11 +39,7 @@ class DishDetail extends Component {
         console.log("DishDetail render called");
         const selectedDish = this.props.selectedDish;
         console.log(selectedDish);
-        return (
-            <div className="row">
-                {this.renderDish(selectedDish)}
-            </div>
-        );
+        return (this.renderDish(selectedDish));
     }
 }
 
