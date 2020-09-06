@@ -5,10 +5,11 @@ class DishDetail extends Component {
 
     constructor(props) {
         super (props);
-        this.selectedDish = this.props.selectedDish;
+        console.log("DishDetail constructor called");
     }
 
     renderDish(dish) {
+        console.log("DishDetail RenderDish called");
         if (dish) {
             return (
                 <div>
@@ -35,9 +36,12 @@ class DishDetail extends Component {
     }
 
     render() {
+        console.log("DishDetail render called");
+        const selectedDish = this.props.selectedDish;
+        console.log(selectedDish);
         return (
             <div className="row">
-                {this.renderDish(this.selectedDish)}
+                {this.renderDish(selectedDish)}
             </div>
         );
     }
