@@ -2,10 +2,17 @@ import React, { Component } from 'react';
 import { Card, CardImg, CardText, CardBody, CardTitle } from 'reactstrap';
 
 class DishDetail extends Component {
-
     constructor(props) {
         super (props);
-        console.log("DishDetail constructor called");
+        console.log("DishDetailComponent constructor is invoked");
+    }
+    
+    componentDidMount() {
+        console.log('DishDetail Component ComponentDidMount is invoked');
+    }
+
+    componentDidUpdate() {
+        console.log('DishDetail Component ComponentDidUpdate is invoked');
     }
 
     reformatDate(date) {
@@ -68,9 +75,8 @@ class DishDetail extends Component {
     }
 
     render() {
-        console.log("DishDetail render called");
+        console.log("DishDetail Component render invoked");
         const selectedDish = this.props.selectedDish;
-        console.log(selectedDish);
         return (this.renderDish(selectedDish));
     }
 }
