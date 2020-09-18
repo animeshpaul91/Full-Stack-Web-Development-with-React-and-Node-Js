@@ -44,7 +44,7 @@ class CommentForm extends Component {
                             <Row className="form-group">
                                 <Label htmlFor="rating" md={12}>
                                     Rating
-                            </Label>
+                                </Label>
                                 <Col md={{ size: 12 }}>
                                     <Control.select
                                         model=".rating"
@@ -62,7 +62,7 @@ class CommentForm extends Component {
                             <Row className="form-group">
                                 <Label htmlFor="author" md={12}>
                                     Your Name
-                            </Label>
+                                </Label>
                                 <Col md={12}>
                                     <Control.text
                                         model=".author"
@@ -91,7 +91,7 @@ class CommentForm extends Component {
                             <Row className="form-group">
                                 <Label htmlFor="comment" md={12}>
                                     Comment
-                            </Label>
+                                </Label>
                                 <Col md={12}>
                                     <Control.textarea
                                         model=".comment"
