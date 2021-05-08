@@ -38,10 +38,11 @@ const requestHandler = (request, response) => { // this is an event listener whi
             body.push(chunk); // get all chunks from stream
         });
 
-        return request.on('end', () => { // register an end event to incoming data on stream
-            const parsedBody = Buffer.concat(body).toString();
-            console.log(parsedBody);
+        request.on('end', () => { // register an end event to incoming data on stream
+            const parsedBody = Buffer.concat(body).toString();            
             const message = parsedBody.split("=")[1];
+            console.log(message);
+
             fs.writeFile("message.txt", message, error => { // writeFile is asynchronous
                 response.statusCode = 302;
                 response.setHeader('Location', '/'); // redirect to "/"
