@@ -9,13 +9,30 @@ const requestHandler = (request, response) => { // this is an event listener whi
     if (url === "/") { // url is true and is exactly "/"
         response.setHeader("Content-Type", "text/html");
         response.write("<html>");
-        response.write("<head> <title> Enter Message </title> </head>");
-        response.write('<body> <form action="/message" method="POST"> <input type="text" name="message"> <button type="submit"> Send </button> </form> </body>');
+        response.write("<head> <title> Welcome to Node Js. </title> </head>");
+        response.write('<body> <h1> Welcome to the world of Node Js. </h1> </body>');
+        response.write('<body> <form action="/create-user" method="POST"> <input type="text" name="username"> <button type="submit"> Create User </button> </form> </body>');
         response.write("</html>")
         return response.end();
     }
 
-    if (url === "/message" && method === "POST") {
+    if (url === '/users') {
+        const users = ['Animesh', 'Sandeep', 'Boris', 'Praveen', 'Swagat'];
+        response.setHeader("Content-Type", "text/html");
+        response.write("<html>");
+        response.write("<head> <title> Users List. </title> </head>");
+        response.write('<body> <h1> List of Users. </h1>');
+        response.write("<ul>")
+
+        for (let user of users) {
+            response.write(`<li> ${user} </li>`);
+        }
+
+        response.write("</ul> </body> </html");
+        return response.end();      
+    }
+
+    if (url === "/create-user" && method === "POST") {
         const body = [];
         request.on('data', (chunk) => { // register an event listener
             body.push(chunk); // get all chunks from stream
@@ -32,16 +49,6 @@ const requestHandler = (request, response) => { // this is an event listener whi
             });
         });
     }
-
-    // process.exit(); // will exit upon receiving first request
-    // fill response object with data
-    response.setHeader("Content-Type", "text/html");
-    response.write("<html>");
-    response.write("<head> <title> My First Page </title> </head>");
-    response.write("<body><h1> Hello from Node Js Server! </h1> </body>");
-    response.write("</html>")
-    response.end();
-    // cannot write to response anymore at this point
 }
 
 
