@@ -21,16 +21,16 @@ const server = http.createServer((request, response) => { // this is an event li
             body.push(chunk); // get all chunks from stream
         });
 
-        request.on('end', () => {
+        return request.on('end', () => { // register an end event to incoming data on stream
             const parsedBody = Buffer.concat(body).toString();
             console.log(parsedBody);
             const message = parsedBody.split("=")[1];
-            fs.writeFileSync("message.txt", message);
-        });
-        
-        response.statusCode = 302;
-        response.setHeader('Location', '/'); // redirect to "/"
-        return response.end();
+            fs.writeFile("message.txt", message, error => {
+                response.statusCode = 302;
+                response.setHeader('Location', '/'); // redirect to "/"
+                return response.end();
+            });
+        });                
     }
 
     // process.exit(); // will exit upon receiving first request
