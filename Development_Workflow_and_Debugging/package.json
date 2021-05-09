@@ -1,0 +1,13 @@
+{
+  "name": "development_workflow_and_debugging",
+  "version": "1.0.0",
+  "description": "Complete Node. Js Guide",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1", 
+    "start": "node app.js",    
+    "start-server": "node app.js"
+  },
+  "author": "Animesh Paul",
+  "license": "ISC"
+}
