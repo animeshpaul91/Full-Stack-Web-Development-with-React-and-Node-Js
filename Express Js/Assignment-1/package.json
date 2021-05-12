@@ -1,14 +1,14 @@
 {
-  "name": "development_workflow_and_debugging",
+  "name": "assignment-1",
   "version": "1.0.0",
-  "description": "Complete Node. Js Guide",
-  "main": "app.js",
+  "description": "",
+  "main": "assignment1.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "nodemon app.js",
-    "start-server": "node assignment1.js"
+    "start-server": "node app.js"
   },
-  "author": "Animesh Paul",
+  "author": "",
   "license": "ISC",
   "devDependencies": {
     "nodemon": "^2.0.7"
