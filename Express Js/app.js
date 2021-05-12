@@ -10,6 +10,15 @@ const app = express();
    Event Loop uses callbacks
 */
 
+app.use((request, response, next) => { // this is a middleware
+   console.log("In the Middleware!");
+   next(); // this allows the request to continue to the next middleware in line
+});
+
+app.use((request, response, next) => {
+   console.log("In another Middleware!");
+});
+
 const server = http.createServer(app); // creates an infinite event loop (listener)
 
 
