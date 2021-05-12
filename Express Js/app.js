@@ -17,9 +17,8 @@ app.use((request, response, next) => { // this is a middleware
 
 app.use((request, response, next) => {
    console.log("In another Middleware!");
+   // default response header is text/HTML
+   response.send('<h1> Hello from Express </h1>');
 });
 
-const server = http.createServer(app); // creates an infinite event loop (listener)
-
-
-server.listen(3000);
+app.listen(3000);
