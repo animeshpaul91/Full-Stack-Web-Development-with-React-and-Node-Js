@@ -10,12 +10,20 @@ const app = express();
    Event Loop uses callbacks
 */
 
-app.use((request, response, next) => { // this is a middleware
-   console.log("In the Middleware!");
-   next(); // this allows the request to continue to the next middleware in line
+app.use('/', (request, response, next) => {
+   console.log('This always runs!');
+   next();
 });
 
-app.use((request, response, next) => {
+// Specific routes appear before
+app.use('/add-product', (request, response, next) => { // matches for any route starting with /
+   console.log("In product Middleware!");
+   // default response header is text/HTML
+   response.send('<h1> Add Product Page </h1>');
+   // you never wanna call next() here
+});
+
+app.use('/', (request, response, next) => { // matches for any route starting with /
    console.log("In another Middleware!");
    // default response header is text/HTML
    response.send('<h1> Hello from Express </h1>');
