@@ -1,3 +1,4 @@
+const path = require('path');
 const http = require("http");
 
 const express = require('express');
@@ -18,7 +19,7 @@ app.use('/admin', adminRoutes); // router exported in admin.js is a valid midddl
 app.use(shopRoutes);
 
 app.use((request, response, next) => { // middleware to catch all route
-   response.status(404).send('<h1> Page not found </h1>');
+   response.status(404).sendFile(path.join(__dirname, 'views', '404.html'));
 });
 
 app.listen(3000);
