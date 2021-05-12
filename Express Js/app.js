@@ -10,13 +10,14 @@ const shopRoutes = require('./routes/shop');
 
 app.use(bodyParser.urlencoded({extended: false})); // registers a middlewate and calls next()
 
-app.use(adminRoutes); // router exported in admin.js is a valid midddleware function
+app.use('/admin', adminRoutes); // router exported in admin.js is a valid midddleware function
 // This will add all admin routes
 // The order matters
+// all routes in admin will be prefixed with "/admin"
 
 app.use(shopRoutes);
 
-app.use((request, response, next) => {
+app.use((request, response, next) => { // middleware to catch all route
    response.status(404).send('<h1> Page not found </h1>');
 });
 
