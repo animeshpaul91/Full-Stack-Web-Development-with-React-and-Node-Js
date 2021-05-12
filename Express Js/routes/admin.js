@@ -2,6 +2,8 @@ const path = require('path');
 
 const express = require('express');
 
+const rootDir = require('../util/path');
+
 const router = express.Router();
 
 
@@ -11,7 +13,7 @@ router.get('/add-product', (request, response, next) => { // matches for any rou
     // console.log("In product Middleware!");
     // default response header is text/HTML
  
-    response.sendFile(path.join(__dirname, '../', 'views', 'add-product.html'));
+    response.sendFile(path.join(rootDir, 'views', 'add-product.html'));
     // you never wanna call next() here
  });
  
