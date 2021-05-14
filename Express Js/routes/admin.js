@@ -19,7 +19,7 @@ router.get('/add-product', (request, response, next) => { // matches for any rou
  
  // route POST "/admin/add-product"
  router.post('/add-product', (request, response, next) => { // matches for any route starting with /
-    console.log(request.body);
+    console.log(request.body); // this requires body parser middleware registered in app.js
     response.redirect('/');
  });
 
