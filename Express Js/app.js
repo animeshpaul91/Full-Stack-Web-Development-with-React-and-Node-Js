@@ -10,6 +10,7 @@ const adminRoutes = require('./routes/admin');
 const shopRoutes = require('./routes/shop');
 
 app.use(bodyParser.urlencoded({extended: false})); // registers a middlewate and calls next()
+app.use(express.static(path.join(__dirname, 'public'))); // serve static content
 
 app.use('/admin', adminRoutes); // router exported in admin.js is a valid midddleware function
 // This will add all admin routes
